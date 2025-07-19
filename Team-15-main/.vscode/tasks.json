@@ -1,0 +1,56 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start All Services",
+            "type": "shell",
+            "command": "npm",
+            "args": ["run", "dev"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "new"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Start Backend Only",
+            "type": "shell",
+            "command": "npm",
+            "args": ["run", "dev:backend"],
+            "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
+        {
+            "label": "Start Frontend Only", 
+            "type": "shell",
+            "command": "npm",
+            "args": ["run", "dev:frontend"],
+            "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
+        {
+            "label": "Start ML API Only",
+            "type": "shell",
+            "command": "npm",
+            "args": ["run", "dev:ml"],
+            "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
+        {
+            "label": "Install All Dependencies",
+            "type": "shell",
+            "command": "npm",
+            "args": ["run", "install:all"],
+            "group": "build"
+        }
+    ]
+}

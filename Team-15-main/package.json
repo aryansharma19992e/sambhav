@@ -1,0 +1,19 @@
+{
+  "name": "team-15-full-stack",
+  "version": "1.0.0",
+  "description": "MERN Stack with ML FastAPI Integration",
+  "scripts": {
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\" \"npm run start:ml\"",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\" \"npm run dev:ml\"",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm start", 
+    "start:ml": "cd ML && pip install -r requirements.txt && python main.py",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:ml": "cd ML && pip install -r requirements.txt && python main.py",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install && cd ../ML && pip install -r requirements.txt"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
